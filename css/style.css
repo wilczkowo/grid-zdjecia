@@ -1,0 +1,71 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font */
+
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CONSTANTS */
+:root {
+  /* COLORS */
+  --BACKGROUND-COLOR: #333;
+  --LIGHT-COLOR: #b6b5b5;
+  --DARK-BLUE: rgb(49, 146, 216);
+  --LIGHT-BLUE: rgb(85, 182, 252);
+
+  /* BORDERS */
+  --WHITE-BORDER: solid white 1px;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+}
+
+body {
+  background-color: var(--BACKGROUND-COLOR);
+  padding: 2rem;
+  font-family: "Bruno Ace SC", cursive;
+  font-size: 2rem;
+  font-weight: bolder;
+  counter-reset: grid-conuter;
+}
+
+.container {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+
+}
+
+.small {
+}
+.vertical {
+  grid-row: span 2;
+}
+.horizontal {
+  grid-column: span 2;
+}
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.container div img {
+width: minmax(100%, 300px);
+height: auto;
+}
+
+.container div{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
